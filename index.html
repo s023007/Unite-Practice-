@@ -7,34 +7,62 @@
     body {
       direction: rtl;
       text-align: right;
-      font-family: "Tahoma", sans-serif;
-      line-height: 1.9;
-      margin: ٢٠px;
+      font-family: "Tahoma", "Cairo", sans-serif;
+      line-height: 2;
+      margin: 20px;
+      font-size: 18px;
+      background-color: #fafafa;
     }
-    h1, h2 { text-align: center; }
+    h1, h2 {
+      text-align: center;
+      font-weight: 700;
+      color: #003366;
+    }
     .question {
-      border: ١px solid #ccc;
-      padding: ١٠px ١٥px;
-      margin-bottom: ١٢px;
-      border-radius: ٦px;
+      border: 1px solid #ddd;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
     }
-    .q-title { font-weight: bold; color: #003366; }
-    .answer { margin-top: ٨px; }
-    .step { margin-right: ١٥px; }
+    .q-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #1a3a5f;
+    }
+    .answer {
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border-right: 4px solid #1a3a5f;
+    }
+    /* ألوان مختلفة للأجوبة لتسهيل التمييز بين الأسئلة */
+    .question:nth-of-type(odd) .answer {
+      background-color: #eef5ff;
+    }
+    .question:nth-of-type(even) .answer {
+      background-color: #fff6e8;
+    }
+    .step {
+      margin-right: 16px;
+      margin-bottom: 4px;
+    }
     .frac {
       display: inline-block;
       vertical-align: middle;
       text-align: center;
-      font-size: ٩٥%;
+      font-size: 95%;
     }
     .frac .num {
       display: block;
-      border-bottom: ١px solid #000;
-      padding: ٠ ٢px;
+      border-bottom: 1px solid #000;
+      padding: 0 2px;
     }
     .frac .den {
       display: block;
-      padding: ٠ ٢px;
+      padding: 0 2px;
     }
   </style>
 </head>
@@ -43,7 +71,7 @@
 <h1>مراجعة الاختبار النهائي</h1>
 <h2>حل أسئلة الوحدة الأولى</h2>
 
-<!-- ١: الشكل الأول (س مفتوح لأعلى) -->
+<!-- ١: الشكل الأول (منحنى مفتوح لأعلى) -->
 <div class="question">
   <div class="q-title">السؤال (١): في الشكل المقابل</div>
   <div class="answer">
@@ -68,49 +96,48 @@
   </div>
 </div>
 
-<!-- ٢: ص = ٢ − (س + ٣)² -->
+<!-- ٢: دالة على صورة رأس المنحنى -->
 <div class="question">
   <div class="q-title">السؤال (٢): للدالة ص = ٢ − (س + ٣)<sup>٢</sup></div>
   <div class="answer">
     <p class="step">
-      الدالة على الصورة: ص = ج − (س − ب)<sup>٢</sup>
-      ⇒ منحنى مفتوح إلى أسفل ⇒ له <strong>قيمة عظمى</strong>.
+      الدالة على الصورة: ص = ج − (س − ب)<sup>٢</sup> ⇒ منحنى مفتوح إلى أسفل.
     </p>
     <p class="step">
       رأس المنحنى عند (−٣ ، ٢) (رأس المنحنى)،
-      إذًا القيمة العظمى هي <strong>٢</strong>.
+      إذًا <strong>القيمة العظمى</strong> هي <strong>٢</strong>.
     </p>
   </div>
 </div>
 
-<!-- ٣: ص = (س ± ٢)² + ٣ -->
+<!-- ٣: قيمة صغرى من الشكل العام -->
 <div class="question">
-  <div class="q-title">السؤال (٣): للدالة من الشكل ص = (س ± ٢)<sup>٢</sup> + ٣</div>
+  <div class="q-title">السؤال (٣): إذا كانت الدالة على صورة ص = (س − ب)<sup>٢</sup> + ج</div>
   <div class="answer">
     <p class="step">
-      الصورة العامة: ص = (س − ب)<sup>٢</sup> + ج
-      ⇒ منحنى مفتوح إلى أعلى ⇒ له <strong>قيمة صغرى</strong>.
+      المنحنى مفتوح إلى أعلى، لذا تكون له <strong>قيمة صغرى</strong>.
+      هذه القيمة هي ج.
     </p>
     <p class="step">
-      قيمة صغرى = ج = <strong>٣</strong>.
+      <strong>القيمة الصغرى = ج</strong>.
     </p>
   </div>
 </div>
 
-<!-- ٤: نقطة التحول لس² − ٤س + ١ -->
+<!-- ٤: نقطة التحول لدالة تربيعية عامة -->
 <div class="question">
   <div class="q-title">السؤال (٤): للدالة ص = س<sup>٢</sup> − ٤س + ١</div>
   <div class="answer">
     <p class="step">
-      أ = ١ ، ب = −٤ ، ج = ١.
-      نحسب س عند رأس المنحنى من
+      معاملات الدالة: أ = ١ ، ب = −٤ ، ج = ١.
+    </p>
+    <p class="step">
+      إحداثي س لرأس المنحنى من العلاقة:
+      س<sub>رأس</sub> =
       <span class="frac">
         <span class="num">−ب</span>
         <span class="den">٢أ</span>
-      </span>:
-    </p>
-    <p class="step">
-      س<sub>رأس</sub>
+      </span>
       =
       <span class="frac">
         <span class="num">−(−٤)</span>
@@ -124,11 +151,11 @@
       = ٢
     </p>
     <p class="step">
-      نعوّض في الدالة:
+      نعوّض في الدالة لإيجاد ص عند الرأس:
       ص = ٢<sup>٢</sup> − ٤×٢ + ١ = ٤ − ٨ + ١ = −٣
     </p>
     <p class="step">
-      إذًا <strong>نقطة التحوّل (رأس المنحنى) هي (٢ ، −٣)</strong> (رأس المنحنى).
+      <strong>نقطة التحوّل (رأس المنحنى) هي (٢ ، −٣)</strong> (رأس المنحنى).
     </p>
   </div>
 </div>
@@ -159,21 +186,54 @@
 <div class="question">
   <div class="q-title">السؤال (٦): ص = س<sup>٢</sup> + ٤س + ١ (إكمال المربع بطريقتين)</div>
   <div class="answer">
-    <p><strong>الطريقة الأولى: إكمال المربع مباشرة</strong></p>
+
+    <p><strong>الطريقة الأولى: إكمال المربع على صورة (س ± أ)<sup>٢</sup> − أ<sup>٢</sup></strong></p>
+
     <p class="step">
+      نأخذ أ من معامل س:
+      معامل س = ٤ ⇒
+      أ =
+      <span class="frac">
+        <span class="num">٤</span>
+        <span class="den">٢</span>
+      </span>
+      = ٢
+    </p>
+
+    <p class="step">
+      إذًا:
+      س<sup>٢</sup> + ٤س
+      = (س + ٢)<sup>٢</sup> − ٢<sup>٢</sup>
+      = (س + ٢)<sup>٢</sup> − ٤
+    </p>
+
+    <p class="step">
+      الآن نضيف الحدّ الثابت:
       س<sup>٢</sup> + ٤س + ١
-      = (س<sup>٢</sup> + ٤س + ٤) − ٤ + ١
+      = \[(س + ٢)<sup>٢</sup> − ٤\] + ١
       = (س + ٢)<sup>٢</sup> − ٣
     </p>
+
     <p class="step">
       إذًا الصورة على شكل مربع كامل:
       <strong>ص = (س + ٢)<sup>٢</sup> − ٣</strong>.
     </p>
 
+    <hr>
+
     <p><strong>الطريقة الثانية: باستخدام رأس المنحنى</strong></p>
+
     <p class="step">
-      أ = ١ ، ب = ٤ ⇒
-      س<sub>رأس</sub>
+      معاملات الدالة: أ = ١ ، ب = ٤.
+    </p>
+
+    <p class="step">
+      نحسب إحداثي س لرأس المنحنى من:
+      س<sub>رأس</sub> =
+      <span class="frac">
+        <span class="num">−ب</span>
+        <span class="den">٢أ</span>
+      </span>
       =
       <span class="frac">
         <span class="num">−٤</span>
@@ -186,16 +246,25 @@
       </span>
       = −٢
     </p>
+
     <p class="step">
-      نعوّض في الدالة:
+      نعوّض في الدالة لإيجاد ص:
       ص = (−٢)<sup>٢</sup> + ٤(−٢) + ١
       = ٤ − ٨ + ١ = −٣
     </p>
+
     <p class="step">
-      إذًا نقطة التحوّل (رأس المنحنى) هي (−٢ ، −٣) (رأس المنحنى)،
-      وصورة الدالة:
-      <strong>ص = (س + ٢)<sup>٢</sup> − ٣</strong>.
+      إذًا نقطة التحوّل <strong>(رأس المنحنى)</strong> هي:
+      <strong>(−٢ ، −٣)</strong> (رأس المنحنى).
     </p>
+
+    <p class="step">
+      نكتب الدالة على صورة رأس المنحنى:
+      ص = (س − س<sub>رأس</sub>)<sup>٢</sup> + ص<sub>رأس</sub>
+      ⇒
+      ص = (س + ٢)<sup>٢</sup> − ٣
+    </p>
+
   </div>
 </div>
 
@@ -203,21 +272,52 @@
 <div class="question">
   <div class="q-title">السؤال (٨): ص = س<sup>٢</sup> − ٦س + ٥ (إكمال المربع بطريقتين)</div>
   <div class="answer">
-    <p><strong>الطريقة الأولى: إكمال المربع مباشرة</strong></p>
+
+    <p><strong>الطريقة الأولى: إكمال المربع على صورة (س − أ)<sup>٢</sup> − أ<sup>٢</sup></strong></p>
+
     <p class="step">
-      س<sup>٢</sup> − ٦س + ٥
-      = (س<sup>٢</sup> − ٦س + ٩) − ٩ + ٥
-      = (س − ٣)<sup>٢</sup> − ٤
+      معامل س = −٦ ⇒
+      أ =
+      <span class="frac">
+        <span class="num">−٦</span>
+        <span class="den">٢</span>
+      </span>
+      = −٣
     </p>
+
     <p class="step">
       إذًا:
+      س<sup>٢</sup> − ٦س
+      = (س − ٣)<sup>٢</sup> − (−٣)<sup>٢</sup>
+      = (س − ٣)<sup>٢</sup> − ٩
+    </p>
+
+    <p class="step">
+      نضيف الحدّ الثابت:
+      س<sup>٢</sup> − ٦س + ٥
+      = \[(س − ٣)<sup>٢</sup> − ٩\] + ٥
+      = (س − ٣)<sup>٢</sup> − ٤
+    </p>
+
+    <p class="step">
+      إذًا الصورة على شكل مربع كامل:
       <strong>ص = (س − ٣)<sup>٢</sup> − ٤</strong>.
     </p>
 
+    <hr>
+
     <p><strong>الطريقة الثانية: باستخدام رأس المنحنى</strong></p>
+
     <p class="step">
-      أ = ١ ، ب = −٦ ⇒
-      س<sub>رأس</sub>
+      أ = ١ ، ب = −٦.
+    </p>
+
+    <p class="step">
+      س<sub>رأس</sub> =
+      <span class="frac">
+        <span class="num">−ب</span>
+        <span class="den">٢أ</span>
+      </span>
       =
       <span class="frac">
         <span class="num">−(−٦)</span>
@@ -230,20 +330,27 @@
       </span>
       = ٣
     </p>
+
     <p class="step">
       نعوّض في الدالة:
       ص = ٣<sup>٢</sup> − ٦×٣ + ٥
       = ٩ − ١٨ + ٥ = −٤
     </p>
+
     <p class="step">
-      إذًا نقطة التحوّل (رأس المنحنى) هي (٣ ، −٤) (رأس المنحنى)،
-      وصورة الدالة:
+      إذًا نقطة التحوّل <strong>(رأس المنحنى)</strong> هي:
+      <strong>(٣ ، −٤)</strong> (رأس المنحنى).
+    </p>
+
+    <p class="step">
+      فتكون الدالة على صورة رأس المنحنى:
       <strong>ص = (س − ٣)<sup>٢</sup> − ٤</strong>.
     </p>
+
   </div>
 </div>
 
-<!-- ٩: تقاطع مع محور الصادات لس² − ٤س + ١ -->
+<!-- ٩: تقاطع مع محور الصادات -->
 <div class="question">
   <div class="q-title">السؤال (٩): نقطة تقاطع ص = س<sup>٢</sup> − ٤س + ١ مع محور الصادات</div>
   <div class="answer">
@@ -254,8 +361,7 @@
       ص = ٠<sup>٢</sup> − ٤×٠ + ١ = ١
     </p>
     <p class="step">
-      إذًا نقطة التقاطع هي
-      <strong>(٠ ، ١)</strong>.
+      <strong>نقطة التقاطع هي (٠ ، ١).</strong>
     </p>
   </div>
 </div>
@@ -265,21 +371,21 @@
   <div class="q-title">السؤال (١٠): رأس منحنى الدالة ص = (س − أ)<sup>٢</sup> + ب هو (٢ ، −٥)</div>
   <div class="answer">
     <p class="step">
-      رأس المنحنى للدالة على هذه الصورة هو (أ ، ب).
+      على الصورة ص = (س − أ)<sup>٢</sup> + ب يكون رأس المنحنى (أ ، ب).
     </p>
     <p class="step">
-      بما أن الرأس = (٢ ، −٥)، إذًا أ = ٢ ، ب = −٥.
+      بما أن الرأس = (٢ ، −٥) ⇒ أ = ٢ ، ب = −٥.
     </p>
     <p class="step">
       أ + ب = ٢ + (−٥) = −٣.
     </p>
     <p class="step">
-      <strong>إذن أ + ب = −٣</strong>.
+      <strong>إذن أ + ب = −٣.</strong>
     </p>
   </div>
 </div>
 
-<!-- ١١: نوع جذري س² − ٣س − ١٠ -->
+<!-- ١١: نوع جذور س² − ٣س − ١٠ -->
 <div class="question">
   <div class="q-title">السؤال (١١): نوع جذري المعادلة س<sup>٢</sup> − ٣س − ١٠ = ٠</div>
   <div class="answer">
@@ -287,8 +393,7 @@
       أ = ١ ، ب = −٣ ، ج = −١٠.
     </p>
     <p class="step">
-      المميز Δ =
-      ب<sup>٢</sup> − ٤أج
+      Δ = ب<sup>٢</sup> − ٤أج
       = (−٣)<sup>٢</sup> − ٤×١×(−١٠)
       = ٩ + ٤٠ = ٤٩ &gt; ٠
     </p>
@@ -311,19 +416,22 @@
   </div>
 </div>
 
-<!-- ١٣: عام -->
+<!-- ١٣: إذا كان ب² − ٤أج < ٠ -->
 <div class="question">
   <div class="q-title">السؤال (١٣): إذا كان ب<sup>٢</sup> − ٤أج &lt; ٠</div>
   <div class="answer">
     <p class="step">
-      إذا كان Δ &lt; ٠ فإن المعادلة <strong>لا تملك جذورًا حقيقية</strong>.
+      إذا كان Δ &lt; ٠ فإن المعادلة لا تملك جذورًا حقيقية.
+    </p>
+    <p class="step">
+      <strong>لا يوجد حل حقيقي.</strong>
     </p>
   </div>
 </div>
 
 <!-- ١٤: س² − ك س + ٩ جذران متساويان -->
 <div class="question">
-  <div class="q-title">السؤال (١٤): س<sup>٢</sup> − ك س + ٩ = ٠ لها جذران متساويان</div>
+  <div class="q-title">السؤال (١٤): المعادلة س<sup>٢</sup> − ك س + ٩ = ٠ لها جذران متساويان</div>
   <div class="answer">
     <p class="step">
       شرط الجذرين المتساويين: Δ = ٠.
@@ -332,15 +440,15 @@
       Δ = ك<sup>٢</sup> − ٤×١×٩ = ك<sup>٢</sup> − ٣٦ = ٠
     </p>
     <p class="step">
-      ك<sup>٢</sup> = ٣٦ ⇒ ك = ±٦.
+      ك<sup>٢</sup> = ٣٦ ⇒ ك = ±٦
     </p>
     <p class="step">
-      <strong>إذن ك = ±٦</strong>.
+      <strong>إذن ك = ±٦.</strong>
     </p>
   </div>
 </div>
 
-<!-- ١٥: حل نظام ص = س + ١ ، س² + ص² = ١٣ -->
+<!-- ١٥: نظام ص = س + ١ ، س² + ص² = ١٣ -->
 <div class="question">
   <div class="q-title">السؤال (١٥): النظام ص = س + ١ ، س<sup>٢</sup> + ص<sup>٢</sup> = ١٣</div>
   <div class="answer">
@@ -362,12 +470,12 @@
       عند س = −٣ ⇒ ص = −٢
     </p>
     <p class="step">
-      <strong>الحلان: (٢ ، ٣) و (−٣ ، −٢)، والزوج المطلوب غالبًا (٢ ، ٣).</strong>
+      <strong>الحلان: (٢ ، ٣) و(−٣ ، −٢).</strong>
     </p>
   </div>
 </div>
 
-<!-- ١٦: ص = س − ١ ، س² + ص² = ٥ -->
+<!-- ١٦: نظام ص = س − ١ ، س² + ص² = ٥ -->
 <div class="question">
   <div class="q-title">السؤال (١٦): النظام ص = س − ١ ، س<sup>٢</sup> + ص<sup>٢</sup> = ٥</div>
   <div class="answer">
@@ -389,33 +497,33 @@
       عند س = −١ ⇒ ص = −٢
     </p>
     <p class="step">
-      <strong>الحلان: (٢ ، ١) و (−١ ، −٢)، والزوج المطلوب غالبًا (٢ ، ١).</strong>
+      <strong>الحلان: (٢ ، ١) و(−١ ، −٢).</strong>
     </p>
   </div>
 </div>
 
-<!-- ١٧: (٢ ، ١) حل لنظام ص = س − أ ، س² + ص² = ب -->
+<!-- ١٧: (٢ ، ١) حل لنظام عام -->
 <div class="question">
   <div class="q-title">السؤال (١٧): إذا كانت (٢ ، ١) حلًا للنظام ص = س − أ ، س<sup>٢</sup> + ص<sup>٢</sup> = ب</div>
   <div class="answer">
     <p class="step">
-      من ص = س − أ وبالتعويض:
+      من ص = س − أ:
       ١ = ٢ − أ ⇒ أ = ١
     </p>
     <p class="step">
-      ومن س<sup>٢</sup> + ص<sup>٢</sup> = ب:
+      من س<sup>٢</sup> + ص<sup>٢</sup> = ب:
       ٢<sup>٢</sup> + ١<sup>٢</sup> = ٤ + ١ = ٥ ⇒ ب = ٥
     </p>
     <p class="step">
       أ + ب = ١ + ٥ = ٦
     </p>
     <p class="step">
-      <strong>إذن أ + ب = ٦</strong>.
+      <strong>إذن أ + ب = ٦.</strong>
     </p>
   </div>
 </div>
 
-<!-- ١٨: (٢ ، ٣) حل لنظام ص = س − أ ، ص² − س² = ب -->
+<!-- ١٨: (٢ ، ٣) حل لنظام آخر -->
 <div class="question">
   <div class="q-title">السؤال (١٨): إذا كانت (٢ ، ٣) حلًا للنظام ص = س − أ ، ص<sup>٢</sup> − س<sup>٢</sup> = ب</div>
   <div class="answer">
@@ -431,7 +539,7 @@
       أ + ب = −١ + ٥ = ٤
     </p>
     <p class="step">
-      <strong>إذن أ + ب = ٤</strong>.
+      <strong>إذن أ + ب = ٤.</strong>
     </p>
   </div>
 </div>
@@ -448,44 +556,23 @@
       Δ = (−٣)<sup>٢</sup> − ٤×١×(−٢) = ٩ + ٨ = ١٧ &gt; ٠
     </p>
     <p class="step">
-      إذًا يوجد <strong>حلّان حقيقيان</strong> ⇒ يتقاطعان في <strong>نقطتين</strong>.
+      إذًا يوجد حلّان حقيقيان ⇒ نقطتا تقاطع.
+      <strong>عدد نقاط التقاطع = ٢.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٢٠: سؤال عام عن المميز (اختيارات غير واضحة) -->
-<div class="question">
-  <div class="q-title">السؤال (٢٠): اختيار الدالة ذات جذور حقيقية مختلفة (ملاحظات عامة)</div>
-  <div class="answer">
-    <p class="step">
-      لأن نص الدوال في الملف غير واضح، نذكر القاعدة العامة للطلاب:
-    </p>
-    <ul>
-      <li>إذا كانت الدالة على الصورة أ س<sup>٢</sup> + ب س + ج = ٠، نحسب
-        Δ = ب<sup>٢</sup> − ٤أج.</li>
-      <li>إذا كان Δ &gt; ٠ ⇒ جذران حقيقيان مختلفان.</li>
-      <li>إذا كان Δ = ٠ ⇒ جذران حقيقيان متساويان.</li>
-      <li>إذا كان Δ &lt; ٠ ⇒ لا توجد جذور حقيقية.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ٢١: أي الرسمين له جذران متساويان -->
+<!-- ٢١: أي الرسوم له جذران متساويان -->
 <div class="question">
   <div class="q-title">السؤال (٢١): واحدة من هذه الدوال لها جذران متساويان</div>
   <div class="answer">
     <p class="step">
-      ننظر إلى موضع منحنى كل دالة بالنسبة لمحور السينات:
+      المنحنى الذي <strong>يلامس</strong> محور السينات في نقطة واحدة فقط
+      (رأس المنحنى على المحور) يمثّل معادلة ذات جذرين حقيقيين متساويين.
     </p>
-    <ul>
-      <li>يقطع المحور في نقطتين ⇒ جذران مختلفان.</li>
-      <li>لا يقطع المحور ⇒ لا جذور حقيقية.</li>
-      <li>يلامس المحور في نقطة واحدة فقط (رأس المنحنى على المحور)
-          ⇒ جذران حقيقيان متساويان.</li>
-    </ul>
     <p class="step">
-      من الرسوم الأربعة، المنحنى <strong>الأخضر في أقصى اليمين</strong>
-      يلامس محور السينات عند نقطة واحدة فقط، لذلك جذراه متساويان.
+      من الرسوم في الورقة الأصلية، المنحنى
+      <strong>الأخضر في أقصى اليمين</strong> هو الذي يلامس المحور السيني عند نقطة واحدة.
     </p>
     <p class="step">
       <strong>إذن الرسم الصحيح هو الرسم الرابع (الأخضر في أقصى اليمين).</strong>
@@ -510,9 +597,8 @@
       ومحور التماثل س = ٢.
     </p>
     <p class="step">
-      بحل المعادلة س<sup>٢</sup> − ٤س + ٣ = ٠
-      نحصل على الجذرين ١ ، ٣،
-      والتقاطع مع محور الصادات هو (٠ ، ٣).
+      جذرا المعادلة ص = ٠ هما ١ ، ٣
+      ونقطة التقاطع مع محور الصادات هي (٠ ، ٣).
     </p>
     <ul>
       <li>(١) نقطة التحوّل (−١ ، ٢) ⟵ <strong>خطأ</strong>.</li>
@@ -534,7 +620,7 @@
       Δ = (−٥)<sup>٢</sup> − ٤×٢×٢ = ٢٥ − ١٦ = ٩ &gt; ٠
     </p>
     <p class="step">
-      إذًا يوجد <strong>حلّان حقيقيان</strong>.
+      <strong>يوجد حلّان حقيقيان.</strong>
     </p>
   </div>
 </div>
@@ -550,12 +636,12 @@
       Δ = (−١٢)<sup>٢</sup> − ٤×٤×٩ = ١٤٤ − ١٤٤ = ٠
     </p>
     <p class="step">
-      إذًا لها <strong>حل حقيقي واحد مكرر</strong>.
+      <strong>حل حقيقي واحد مكرر.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٢٥: المميز = ٨ لمعادلة ٤س² − ٦س + ك -->
+<!-- ٢٥: مميز ٤س² − ٦س + ك = ٨ -->
 <div class="question">
   <div class="q-title">السؤال (٢٥): إذا كان مميز المعادلة ٤س<sup>٢</sup> − ٦س + ك = ٠ يساوي ٨، أوجد ك</div>
   <div class="answer">
@@ -565,7 +651,7 @@
       = ٣٦ − ١٦ك
     </p>
     <p class="step">
-      نحلي: ٣٦ − ١٦ك = ٨ ⇒ ١٦ك = ٢٨
+      ٣٦ − ١٦ك = ٨ ⇒ ١٦ك = ٢٨
     </p>
     <p class="step">
       ك =
@@ -580,12 +666,12 @@
       </span>
     </p>
     <p class="step">
-      <strong>إذن ك = ٧/٤ (كسر في أبسط صورة).</strong>
+      <strong>إذن ك = ٧/٤.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٢٦: المميز = ٤ لمعادلة ك س² − ٦س + ١ -->
+<!-- ٢٦: مميز ك س² − ٦س + ١ = ٤ -->
 <div class="question">
   <div class="q-title">السؤال (٢٦): إذا كان مميز المعادلة ك س<sup>٢</sup> − ٦س + ١ = ٠ يساوي ٤، أوجد ك</div>
   <div class="answer">
@@ -596,12 +682,12 @@
       ٣٦ − ٤ك = ٤ ⇒ ٤ك = ٣٢ ⇒ ك = ٨
     </p>
     <p class="step">
-      <strong>إذن ك = ٨</strong>.
+      <strong>إذن ك = ٨.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٢٧: إكمال المربع لثلاث عبارات -->
+<!-- ٢٧: عبارات على صورة مربع كامل -->
 <div class="question">
   <div class="q-title">السؤال (٢٧): اكتب ما يلي على صورة مربع كامل</div>
   <div class="answer">
@@ -621,9 +707,7 @@
 
     <p><strong>٣) س<sup>٢</sup> − ٥س + ٧</strong></p>
     <p class="step">
-      نصف (−٥) هو −٢٫٥، مربّعه ٦٫٢٥:
-    </p>
-    <p class="step">
+      نصف (−٥) هو −٢٫٥ ، مربّعه ٦٫٢٥ ⇒  
       س<sup>٢</sup> − ٥س + ٧
       = (س<sup>٢</sup> − ٥س + ٦٫٢٥) + ٠٫٧٥
       = (س − ٢٫٥)<sup>٢</sup> + ٠٫٧٥
@@ -631,12 +715,11 @@
   </div>
 </div>
 
-<!-- ٢٨: س² − ٢س − ٣ إلى صورة رأس المنحنى -->
+<!-- ٢٨: ص = س² − ٢س − ٣ إلى صورة رأس المنحنى -->
 <div class="question">
   <div class="q-title">السؤال (٢٨): ص = س<sup>٢</sup> − ٢س − ٣</div>
   <div class="answer">
     <p class="step">
-      نكمل المربع:
       س<sup>٢</sup> − ٢س − ٣
       = (س<sup>٢</sup> − ٢س + ١) − ١ − ٣
       = (س − ١)<sup>٢</sup> − ٤
@@ -645,37 +728,29 @@
       <li><strong>نقطة التحوّل (رأس المنحنى)</strong>: (١ ، −٤).</li>
       <li><strong>محور التماثل</strong>: س = ١.</li>
       <li><strong>القيمة الصغرى</strong>: ص = −٤.</li>
-      <li><strong>التقاطع مع محور السينات</strong>:
-        بحل س<sup>٢</sup> − ٢س − ٣ = ٠
-        ⇒ (س − ٣)(س + ١) = ٠
-        ⇒ س = ٣ ، −١
-        ⇒ النقطتان (٣ ، ٠) ، (−١ ، ٠).</li>
-      <li><strong>التقاطع مع محور الصادات</strong>:
-        عند س = ٠ ⇒ ص = −٣ ⇒ (٠ ، −٣).</li>
+      <li><strong>التقاطع مع محور السينات</strong>: بحل س<sup>٢</sup> − ٢س − ٣ = ٠ ⇒ (س − ٣)(س + ١) = ٠ ⇒ س = ٣ ، −١.</li>
+      <li><strong>التقاطع مع محور الصادات</strong>: عند س = ٠ ⇒ ص = −٣.</li>
     </ul>
   </div>
 </div>
 
 <!-- ٢٩: نوع الجذور لثلاث معادلات -->
 <div class="question">
-  <div class="q-title">السؤال (٢٩): حدد نوع الجذور</div>
+  <div class="q-title">السؤال (٢٩): حدد نوع الجذور في كل مما يأتي</div>
   <div class="answer">
     <p><strong>١) س<sup>٢</sup> − ٦س + ٩ = ٠</strong></p>
     <p class="step">
-      Δ = (−٦)<sup>٢</sup> − ٤×١×٩ = ٣٦ − ٣٦ = ٠  
-      ⇒ جذران حقيقيان متساويان.
+      Δ = (−٦)<sup>٢</sup> − ٤×١×٩ = ٣٦ − ٣٦ = ٠ ⇒ جذران حقيقيان متساويان.
     </p>
 
     <p><strong>٢) س<sup>٢</sup> + ٥س + ٦ = ٠</strong></p>
     <p class="step">
-      Δ = ٥<sup>٢</sup> − ٤×١×٦ = ٢٥ − ٢٤ = ١ &gt; ٠  
-      ⇒ جذران حقيقيان مختلفان.
+      Δ = ٥<sup>٢</sup> − ٤×١×٦ = ٢٥ − ٢٤ = ١ &gt; ٠ ⇒ جذران حقيقيان مختلفان.
     </p>
 
     <p><strong>٣) س<sup>٢</sup> − ٣س + ٥ = ٠</strong></p>
     <p class="step">
-      Δ = (−٣)<sup>٢</sup> − ٤×١×٥ = ٩ − ٢٠ = −١١ &lt; ٠  
-      ⇒ لا جذور حقيقية (جذران عقديان).
+      Δ = (−٣)<sup>٢</sup> − ٤×١×٥ = ٩ − ٢٠ = −١١ &lt; ٠ ⇒ لا جذور حقيقية.
     </p>
   </div>
 </div>
@@ -688,10 +763,10 @@
       Δ = ك<sup>٢</sup> − ٤×١×٦ = ك<sup>٢</sup> − ٢٤ = ٠
     </p>
     <p class="step">
-      ك<sup>٢</sup> = ٢٤ ⇒ ك = ± √٢٤ = ± ٢√٦
+      ك<sup>٢</sup> = ٢٤ ⇒ ك = ±٢√٦
     </p>
     <p class="step">
-      <strong>إذن ك = ±٢√٦</strong>.
+      <strong>إذن ك = ±٢√٦.</strong>
     </p>
   </div>
 </div>
@@ -707,64 +782,59 @@
       ٤ك = ٦٤ ⇒ ك = ١٦
     </p>
     <p class="step">
-      <strong>إذن ك = ١٦</strong>.
+      <strong>إذن ك = ١٦.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٣٢: س² − ٣س − ١٠ < ٠ -->
+<!-- ٣٢: المتباينة س² − ٣س − ١٠ < ٠ -->
 <div class="question">
   <div class="q-title">السؤال (٣٢): حل المتباينة س<sup>٢</sup> − ٣س − ١٠ &lt; ٠</div>
   <div class="answer">
     <p class="step">
-      نحل المعادلة س<sup>٢</sup> − ٣س − ١٠ = ٠
-      ⇒ (س − ٥)(س + ٢) = ٠
-      ⇒ س = ٥ ، −٢
+      نحّل المعادلة س<sup>٢</sup> − ٣س − ١٠ = ٠ ⇒ (س − ٥)(س + ٢) = ٠ ⇒ س = ٥ ، −٢.
     </p>
     <p class="step">
-      المنحنى مفتوح إلى أعلى، فيكون أقل من صفر بين الجذرين:
-      <strong>−٢ &lt; س &lt; ٥</strong>.
+      المنحنى مفتوح إلى أعلى ⇒ أقل من صفر بين الجذرين:
+      <strong>−٢ &lt; س &lt; ٥.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٣٣: س² − س − ١٢ ≥ ٠ -->
+<!-- ٣٣: المتباينة س² − س − ١٢ ≥ ٠ -->
 <div class="question">
   <div class="q-title">السؤال (٣٣): حل المتباينة س<sup>٢</sup> − س − ١٢ ≥ ٠</div>
   <div class="answer">
     <p class="step">
-      نحل المعادلة س<sup>٢</sup> − س − ١٢ = ٠
-      ⇒ (س − ٤)(س + ٣) = ٠
-      ⇒ س = ٤ ، −٣
+      س<sup>٢</sup> − س − ١٢ = ٠ ⇒ (س − ٤)(س + ٣) = ٠ ⇒ س = ٤ ، −٣.
     </p>
     <p class="step">
-      المنحنى مفتوح إلى أعلى، فيكون أكبر أو يساوي صفر خارج الفترة:
-      <strong>س ≤ −٣ أو س ≥ ٤</strong>.
+      المنحنى مفتوح إلى أعلى ⇒ ≥ ٠ خارج الفترة بين الجذرين:
+      <strong>س ≤ −٣ أو س ≥ ٤.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٣٤: س² − ٣س < ٠ -->
+<!-- ٣٤: المتباينة س² − ٣س < ٠ -->
 <div class="question">
   <div class="q-title">السؤال (٣٤): حل المتباينة س<sup>٢</sup> − ٣س &lt; ٠</div>
   <div class="answer">
     <p class="step">
-      س<sup>٢</sup> − ٣س = س(س − ٣)
-      ⇒ الجذور: ٠ ، ٣.
+      س<sup>٢</sup> − ٣س = س(س − ٣) ⇒ الجذور: ٠ ، ٣.
     </p>
     <p class="step">
       المنحنى مفتوح إلى أعلى ⇒ أقل من صفر بين الجذرين:
-      <strong>٠ &lt; س &lt; ٣</strong>.
+      <strong>٠ &lt; س &lt; ٣.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٣٥: س² − ٦س + ٩ ≥ ٠ -->
+<!-- ٣٥: المتباينة س² − ٦س + ٩ ≥ ٠ -->
 <div class="question">
   <div class="q-title">السؤال (٣٥): حل المتباينة س<sup>٢</sup> − ٦س + ٩ ≥ ٠</div>
   <div class="answer">
     <p class="step">
-      س<sup>٢</sup> − ٦س + ٩ = (س − ٣)<sup>٢</sup> ≥ ٠ لجميع قيم س.
+      س<sup>٢</sup> − ٦س + ٩ = (س − ٣)<sup>٢</sup> ≥ ٠ لجميع س.
     </p>
     <p class="step">
       <strong>مجموعة الحل: جميع الأعداد الحقيقية.</strong>
@@ -772,39 +842,33 @@
   </div>
 </div>
 
-<!-- ٣٦: س² < ٣س − ٥ -->
+<!-- ٣٦: المتباينة س² < ٣س − ٥ -->
 <div class="question">
   <div class="q-title">السؤال (٣٦): حل المتباينة س<sup>٢</sup> &lt; ٣س − ٥</div>
   <div class="answer">
     <p class="step">
-      ننقل الأطراف:
+      ننقل الحدود:
       س<sup>٢</sup> − ٣س + ٥ &lt; ٠
     </p>
     <p class="step">
       Δ = (−٣)<sup>٢</sup> − ٤×١×٥ = ٩ − ٢٠ = −١١ &lt; ٠
     </p>
     <p class="step">
-      المنحنى مفتوح إلى أعلى ولا يقطع محور السينات،
-      لذلك قيمته دائمًا أكبر من صفر ⇒ لا يوجد س يجعلها أقل من صفر.
-    </p>
-    <p class="step">
-      <strong>مجموعة الحل: ∅ (لا حل).</strong>
+      المنحنى دائمًا فوق المحور السيني ⇒ لا توجد قيم تجعل التعبير &lt; ٠.
+      <strong>لا حل.</strong>
     </p>
   </div>
 </div>
 
-<!-- ٣٧: س² ≤ ١٢س − ٣٦ -->
+<!-- ٣٧: المتباينة س² ≤ ١٢س − ٣٦ -->
 <div class="question">
   <div class="q-title">السؤال (٣٧): حل المتباينة س<sup>٢</sup> ≤ ١٢س − ٣٦</div>
   <div class="answer">
     <p class="step">
-      س<sup>٢</sup> − ١٢س + ٣٦ ≤ ٠
-      ، والحدّ الأيسر يساوي (س − ٦)<sup>٢</sup>.
+      س<sup>٢</sup> − ١٢س + ٣٦ ≤ ٠ ⇒ (س − ٦)<sup>٢</sup> ≤ ٠
     </p>
     <p class="step">
-      (س − ٦)<sup>٢</sup> ≤ ٠ يحدث فقط عندما س − ٦ = ٠ ⇒ س = ٦.
-    </p>
-    <p class="step">
+      المربع يساوي صفر فقط عندما س − ٦ = ٠ ⇒ س = ٦.
       <strong>مجموعة الحل: {٦}.</strong>
     </p>
   </div>
@@ -812,238 +876,24 @@
 
 <!-- ٣٨: حل بالاستكمال -->
 <div class="question">
-  <div class="q-title">السؤال (٣٨): حل المعادلات الآتية باستخدام إكمال المربع</div>
+  <div class="q-title">السؤال (٣٨): حل المعادلات باستخدام إكمال المربع</div>
   <div class="answer">
     <p><strong>١) س<sup>٢</sup> + ٩س − ١٠ = ٠</strong></p>
     <p class="step">
-      س<sup>٢</sup> + ٩س = ١٠
-    </p>
-    <p class="step">
-      نصف ٩ هو ٤٫٥، مربّعه ٢٠٫٢٥:
+      س<sup>٢</sup> + ٩س = ١٠  
+      نصف ٩ هو ٤٫٥ ، مربّعه ٢٠٫٢٥
     </p>
     <p class="step">
       س<sup>٢</sup> + ٩س + ٢٠٫٢٥ = ١٠ + ٢٠٫٢٥  
       ⇒ (س + ٤٫٥)<sup>٢</sup> = ٣٠٫٢٥
     </p>
     <p class="step">
-      س + ٤٫٥ = ± √٣٠٫٢٥ = ±٥٫٥  
-      ⇒ س = ١ أو س = −١٠
+      س + ٤٫٥ = ±٥٫٥ ⇒ س = ١ أو س = −١٠
     </p>
 
     <p><strong>٢) س<sup>٢</sup> − ٥س + ٦ = ٠</strong></p>
     <p class="step">
-      يمكن باستخدام التحليل:
-      (س − ٢)(س − ٣) = ٠
-      ⇒ س = ٢ أو س = ٣.
-    </p>
-  </div>
-</div>
-
-<!-- ٣٩: الحل بالصيغة العامة -->
-<div class="question">
-  <div class="q-title">السؤال (٣٩): حل المعادلتين بالصيغة العامة</div>
-  <div class="answer">
-    <p><strong>١) ٢س<sup>٢</sup> + ٥س − ٦ = ٠</strong></p>
-    <p class="step">
-      أ = ٢ ، ب = ٥ ، ج = −٦
-    </p>
-    <p class="step">
-      س =
-      <span class="frac">
-        <span class="num">−٥ ± √(٥<sup>٢</sup> − ٤×٢×(−٦))</span>
-        <span class="den">٢×٢</span>
-      </span>
-      =
-      <span class="frac">
-        <span class="num">−٥ ± √٧٣</span>
-        <span class="den">٤</span>
-      </span>
-    </p>
-
-    <p><strong>٢) س<sup>٢</sup> + ٣س − ٥ = ٠</strong></p>
-    <p class="step">
-      أ = ١ ، ب = ٣ ، ج = −٥
-    </p>
-    <p class="step">
-      س =
-      <span class="frac">
-        <span class="num">−٣ ± √(٣<sup>٢</sup> − ٤×١×(−٥))</span>
-        <span class="den">٢×١</span>
-      </span>
-      =
-      <span class="frac">
-        <span class="num">−٣ ± √٢٩</span>
-        <span class="den">٢</span>
-      </span>
-    </p>
-  </div>
-</div>
-
-<!-- ٤٠: إيجاد المميز ونوع الجذور -->
-<div class="question">
-  <div class="q-title">السؤال (٤٠): أوجد المميز ثم نوع الجذور</div>
-  <div class="answer">
-    <p><strong>١) س<sup>٢</sup> − ٧س + ٨ = ٠</strong></p>
-    <p class="step">
-      Δ = (−٧)<sup>٢</sup> − ٤×١×٨ = ٤٩ − ٣٢ = ١٧ &gt; ٠  
-      ⇒ جذران حقيقيان مختلفان.
-    </p>
-
-    <p><strong>٢) ٣س<sup>٢</sup> + ١٠س − ٢ = ٠</strong></p>
-    <p class="step">
-      Δ = ١٠<sup>٢</sup> − ٤×٣×(−٢) = ١٠٠ + ٢٤ = ١٢٤ &gt; ٠  
-      ⇒ جذران حقيقيان مختلفان.
-    </p>
-  </div>
-</div>
-
-<!-- ٤١: ملاحظات عامة عن المميز (لأن الصورة غير واضحة) -->
-<div class="question">
-  <div class="q-title">السؤال (٤١): استخدام المميز لتحديد عدد الجذور</div>
-  <div class="answer">
-    <p class="step">
-      بسبب عدم وضوح أرقام المعادلة في الملف، نذكر القاعدة العامة:
-    </p>
-    <ul>
-      <li>للمعادلة أ س<sup>٢</sup> + ب س + ج = ٠ نحسب المميز Δ = ب<sup>٢</sup> − ٤أج.</li>
-      <li>إذا كان Δ &gt; ٠ ⇒ جذران حقيقيان مختلفان.</li>
-      <li>إذا كان Δ = ٠ ⇒ جذر حقيقي واحد مكرر.</li>
-      <li>إذا كان Δ &lt; ٠ ⇒ لا جذور حقيقية.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ٤٣: معادلات من الدرجة الرابعة والثالثة -->
-<div class="question">
-  <div class="q-title">السؤال (٤٣): أوجد قيم س الحقيقية للمعادلات الآتية</div>
-  <div class="answer">
-    <p><strong>١) س<sup>٤</sup> − ١٣س<sup>٢</sup> + ٣٦ = ٠</strong></p>
-    <p class="step">
-      نضع م = س<sup>٢</sup> ⇒ م<sup>٢</sup> − ١٣م + ٣٦ = ٠  
-      ⇒ (م − ٤)(م − ٩) = ٠  
-      ⇒ م = ٤ أو م = ٩
-    </p>
-    <p class="step">
-      س<sup>٢</sup> = ٤ ⇒ س = ±٢  
-      س<sup>٢</sup> = ٩ ⇒ س = ±٣
-    </p>
-    <p class="step">
-      <strong>الحلول: −٣ ، −٢ ، ٢ ، ٣.</strong>
-    </p>
-
-    <p><strong>٢) ٩س<sup>٤</sup> − ١٣س<sup>٢</sup> + ٤ = ٠</strong></p>
-    <p class="step">
-      م = س<sup>٢</sup> ⇒ ٩م<sup>٢</sup> − ١٣م + ٤ = ٠  
-      Δ = (−١٣)<sup>٢</sup> − ٤×٩×٤ = ١٦٩ − ١٤٤ = ٢٥
-    </p>
-    <p class="step">
-      م =
-      <span class="frac">
-        <span class="num">١٣ ± ٥</span>
-        <span class="den">١٨</span>
-      </span>
-      ⇒ م = ١ أو م =
-      <span class="frac">
-        <span class="num">٨</span>
-        <span class="den">١٨</span>
-      </span>
-      =
-      <span class="frac">
-        <span class="num">٤</span>
-        <span class="den">٩</span>
-      </span>
-    </p>
-    <p class="step">
-      س<sup>٢</sup> = ١ ⇒ س = ±١  
-      س<sup>٢</sup> =
-      <span class="frac">
-        <span class="num">٤</span>
-        <span class="den">٩</span>
-      </span>
-      ⇒ س = ±
-      <span class="frac">
-        <span class="num">٢</span>
-        <span class="den">٣</span>
-      </span>
-    </p>
-    <p class="step">
-      <strong>الحلول: −١ ، −٢/٣ ، ٢/٣ ، ١.</strong>
-    </p>
-
-    <p><strong>٣) س<sup>٣</sup> − ٣س<sup>٢</sup> + ٢س = ٠</strong></p>
-    <p class="step">
-      نأخذ س عاملًا مشتركًا:
-      س(س<sup>٢</sup> − ٣س + ٢) = ٠
-      ⇒ س = ٠ أو س<sup>٢</sup> − ٣س + ٢ = ٠
-    </p>
-    <p class="step">
-      س<sup>٢</sup> − ٣س + ٢ = (س − ١)(س − ٢) = ٠  
-      ⇒ س = ١ أو س = ٢
-    </p>
-    <p class="step">
-      <strong>الحلول: ٠ ، ١ ، ٢.</strong>
-    </p>
-
-    <p><strong>٤) س<sup>٣</sup> − ٥س<sup>٢</sup> + ٦س = ٠</strong></p>
-    <p class="step">
-      س(س<sup>٢</sup> − ٥س + ٦) = ٠  
-      ⇒ س = ٠ أو س<sup>٢</sup> − ٥س + ٦ = ٠
-    </p>
-    <p class="step">
-      س<sup>٢</sup> − ٥س + ٦ = (س − ٢)(س − ٣) ⇒ س = ٢ أو ٣
-    </p>
-    <p class="step">
-      <strong>الحلول: ٠ ، ٢ ، ٣.</strong>
-    </p>
-  </div>
-</div>
-
-<!-- ٤٤: ص = ك س − ٣ مع ص = س² − ٩ (نقطتان مختلفتان) -->
-<div class="question">
-  <div class="q-title">السؤال (٤٤): قيم ك التي تجعل المستقيم ص = ك س − ٣ يقطع ص = س<sup>٢</sup> − ٩ في نقطتين مختلفتين</div>
-  <div class="answer">
-    <p class="step">
-      من التقاطع:
-      س<sup>٢</sup> − ٩ = ك س − ٣  
-      ⇒ س<sup>٢</sup> − ك س − ٦ = ٠
-    </p>
-    <p class="step">
-      المميز: Δ = ك<sup>٢</sup> + ٢٤
-    </p>
-    <p class="step">
-      هذا المقدار أكبر من صفر لأي عدد حقيقي ك،
-      إذًا يوجد دائمًا حلّان حقيقيان مختلفان.
-    </p>
-    <p class="step">
-      <strong>إذن لجميع قيم ك الحقيقية يكون هناك تقاطع في نقطتين.</strong>
-    </p>
-  </div>
-</div>
-
-<!-- ٤٥: المستقيم مماس لـ ٤س² − ١٢س + ٧ -->
-<div class="question">
-  <div class="q-title">السؤال (٤٥): قيم ك التي تجعل المستقيم ص = ك س + ٢ مماسًا للدالة ص = ٤س<sup>٢</sup> − ١٢س + ٧</div>
-  <div class="answer">
-    <p class="step">
-      من شرط التماس نساوي الدالتين ويكون للمعادلة الناتجة جذر واحد:
-    </p>
-    <p class="step">
-      ٤س<sup>٢</sup> − ١٢س + ٧ = ك س + ٢  
-      ⇒ ٤س<sup>٢</sup> − (١٢ + ك)س + ٥ = ٠
-    </p>
-    <p class="step">
-      أ = ٤ ، ب = −(١٢ + ك) ، ج = ٥
-      ⇒ Δ = (١٢ + ك)<sup>٢</sup> − ٤×٤×٥
-      = (ك<sup>٢</sup> + ٢٤ك + ١٤٤) − ٨٠
-      = ك<sup>٢</sup> + ٢٤ك + ٦٤
-    </p>
-    <p class="step">
-      شرط التماس: Δ = ٠
-      ⇒ ك<sup>٢</sup> + ٢٤ك + ٦٤ = ٠
-      ⇒ (ك + ٤)(ك + ١٦) = ٠
-    </p>
-    <p class="step">
-      <strong>ك = −٤ أو ك = −١٦</strong>.
+      (س − ٢)(س − ٣) = ٠ ⇒ س = ٢ أو س = ٣.
     </p>
   </div>
 </div>
