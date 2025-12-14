@@ -84,6 +84,15 @@
   table.sign th, table.sign td{border:1px solid var(--b);padding:8px;text-align:center;font-size:14px}
   table.sign th{background:#f8fafc}
 
+  /* ====== إضافة: إظهار/إخفاء الرسوم البيانية ====== */
+  .svgCard.graph-hidden svg,
+  .svgCard.graph-hidden .cap{display:none;}
+  .svgCard .graphToggleBtn{
+    display:inline-block;
+    margin-inline-start:8px;
+    padding:6px 10px;
+    font-size:12px;
+  }
 </style>
 </head>
 
@@ -93,7 +102,7 @@
 <header id="top">
   <div class="row">
     <div>
-      <div class="title">الوحدة الأولى — الحل الكامل (الصفحات ٣ إلى ٦)</div><div class="sub">إعداد الأستاذ: زايد الرواحي</div>
+      <div class="title">الوحدة الأولى — الحل الكامل (الصفحات ٣ إلى ٦)</div>
       <div class="sub">تصميم بطاقات + أرقام هندية + كسور/جذور احترافية + خط أعداد + طريقتان لإكمال المربع + شرح واضح</div>
       <nav>
         <a class="btn" href="#p3">الصفحة ٣</a>
@@ -842,7 +851,7 @@
       </div>
     </article>
 
-    <!-- س٨: (٣٨) إكمال مربع (طريقتان لكل معادلة) -->
+    <!-- س٨ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ٨</div><div class="tag small">إكمال إلى مربع — طريقتان</div></div>
       <div class="box">
@@ -930,7 +939,7 @@
       </div>
     </article>
 
-    <!-- س٩: (٣٩) الصيغة التربيعية + آلة حاسبة -->
+    <!-- س٩ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ٩</div><div class="tag small">الصيغة التربيعية + تقريب</div></div>
       <div class="box green">
@@ -972,7 +981,7 @@
       </div>
     </article>
 
-    <!-- س١٠: (٤٠) المميز ونوع الجذور -->
+    <!-- س١٠ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ١٠</div><div class="tag small">المميز ونوع الجذرين</div></div>
       <div class="box">
@@ -995,7 +1004,7 @@
       </div>
     </article>
 
-    <!-- س١١: (٤١) مميز مع كسر -->
+    <!-- س١١ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ١١</div><div class="tag small">عدد الجذور</div></div>
       <div class="box green">
@@ -1011,7 +1020,7 @@
       </div>
     </article>
 
-    <!-- س١٢: (٤٢) حلول حقيقية -->
+    <!-- س١٢ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ١٢</div><div class="tag small">أوجد قيم س الحقيقية</div></div>
       <div class="box">
@@ -1073,7 +1082,7 @@
       </div>
     </article>
 
-    <!-- س١٣: (٤٤) تقاطع في نقطتين -->
+    <!-- س١٣ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ١٣</div><div class="tag small">تقاطع في نقطتين</div></div>
       <div class="box green">
@@ -1089,7 +1098,7 @@
       </div>
     </article>
 
-    <!-- س١٤: (٤٥) مماس -->
+    <!-- س١٤ -->
     <article class="q">
       <div class="qTitle"><div class="qNo">السؤال ١٤</div><div class="tag small">مماس</div></div>
       <div class="box">
@@ -1107,6 +1116,35 @@
 
   </div>
 </section>
+
+<!-- ====== إضافة: سكربت إظهار/إخفاء الرسومات البيانية (بدون تغيير محتوى الرسومات) ====== -->
+<script>
+(function(){
+  const cards = document.querySelectorAll('.svgCard');
+  cards.forEach((card, idx) => {
+    const svg = card.querySelector('svg');
+    const cap = card.querySelector('.cap');
+    if(!svg && !cap) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn graphToggleBtn';
+    btn.textContent = 'إخفاء الرسم';
+
+    btn.addEventListener('click', () => {
+      const hidden = card.classList.toggle('graph-hidden');
+      btn.textContent = hidden ? 'إظهار الرسم' : 'إخفاء الرسم';
+    });
+
+    const pill = card.querySelector('.pill');
+    if(pill && pill.parentNode === card){
+      pill.insertAdjacentElement('afterend', btn);
+    } else {
+      card.insertAdjacentElement('afterbegin', btn);
+    }
+  });
+})();
+</script>
 
 <!-- تحويل الأرقام الإنجليزية إلى أرقام هندية تلقائيًا -->
 <script>
